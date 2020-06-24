@@ -1,0 +1,6 @@
+C:\IntegralSoft\IntegralSoft.IntegralCFE.BusinessEntities\bin\Debug\IntegralSoft.IntegralCFE.BusinessEntities.dll
+C:\IntegralSoft\IntegralSoft.IntegralCFE.BusinessEntities\bin\Debug\IntegralSoft.IntegralCFE.BusinessEntities.pdb
+C:\IntegralSoft\IntegralSoft.IntegralCFE.BusinessEntities\obj\Debug\IntegralSoft.IntegralCFE.BusinessEntities.dll
+C:\IntegralSoft\IntegralSoft.IntegralCFE.BusinessEntities\obj\Debug\IntegralSoft.IntegralCFE.BusinessEntities.pdb
+C:\IntegralSoft\IntegralSoft.IntegralCFE.BusinessEntities\obj\Debug\IntegralSoft.IntegralCFE.BusinessEntities.csprojAssemblyReference.cache
+C:\IntegralSoft\IntegralSoft.IntegralCFE.BusinessEntities\obj\Debug\IntegralSoft.IntegralCFE.BusinessEntities.csproj.CoreCompileInputs.cache

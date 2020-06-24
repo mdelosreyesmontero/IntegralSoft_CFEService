@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://IntegralSoft/IntegralCFEService/V001" elementFormDefault="qualified" targetNamespace="http://IntegralSoft/IntegralCFEService/V001" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="EnviarCFE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param" nillable="true" type="tns:ParamEnviarCFE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ParamEnviarCFE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailPDFDestinatario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecurityToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SobreCFE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParamEnviarCFE" nillable="true" type="tns:ParamEnviarCFE" />
+  <xs:element name="EnviarCFEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EnviarCFEResult" nillable="true" type="tns:ResultEnviarCFE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ResultEnviarCFE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="tns:ErrorNegocio" />
+      <xs:element minOccurs="0" name="IdResultCFE" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultEnviarCFE" nillable="true" type="tns:ResultEnviarCFE" />
+  <xs:complexType name="ErrorNegocio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorNegocio" nillable="true" type="tns:ErrorNegocio" />
+  <xs:element name="ConsultarCFE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param" nillable="true" type="tns:ParamConsultarCFE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ParamConsultarCFE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdResultCFE" type="xs:long" />
+      <xs:element minOccurs="0" name="SecurityToken" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParamConsultarCFE" nillable="true" type="tns:ParamConsultarCFE" />
+  <xs:element name="ConsultarCFEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConsultarCFEResult" nillable="true" type="tns:ResultConsultarCFE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ResultConsultarCFE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="tns:ErrorNegocio" />
+      <xs:element minOccurs="0" name="Ingresado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultConsultarCFE" nillable="true" type="tns:ResultConsultarCFE" />
+</xs:schema>

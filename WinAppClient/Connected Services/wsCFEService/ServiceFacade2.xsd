@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://IntegralSoft/IntegralCFEService/V001" elementFormDefault="qualified" targetNamespace="http://IntegralSoft/IntegralCFEService/V001" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="EnviarCFE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param" nillable="true" type="tns:ParamEnviarCFE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ParamEnviarCFE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailPDFDestinatario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecurityToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SobreCFE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParamEnviarCFE" nillable="true" type="tns:ParamEnviarCFE" />
+  <xs:element name="EnviarCFEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EnviarCFEResult" nillable="true" type="tns:ResultEnviarCFE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ResultEnviarCFE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="tns:ErrorNegocio" />
+      <xs:element minOccurs="0" name="IdResultCFE" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultEnviarCFE" nillable="true" type="tns:ResultEnviarCFE" />
+  <xs:complexType name="ErrorNegocio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorNegocio" nillable="true" type="tns:ErrorNegocio" />
+  <xs:element name="ConsultarCFE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param" nillable="true" type="tns:ParamConsultarCFE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ParamConsultarCFE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RecepcionId" type="xs:long" />
+      <xs:element minOccurs="0" name="SecurityToken" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParamConsultarCFE" nillable="true" type="tns:ParamConsultarCFE" />
+  <xs:element name="ConsultarCFEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConsultarCFEResult" nillable="true" type="tns:ResultConsultarCFE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ResultConsultarCFE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatosRecepcion" nillable="true" type="tns:DatosRecepcion" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="tns:ErrorNegocio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultConsultarCFE" nillable="true" type="tns:ResultConsultarCFE" />
+  <xs:complexType name="DatosRecepcion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Archivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CAE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CaeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoSeguridad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailPdfDest" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EnRegimen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fact" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FeMovimientoId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaGeneracion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Impreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroComprobante" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Procesado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Publicado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PublicadoWeb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RE02" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecepcionId" type="xs:long" />
+      <xs:element minOccurs="0" name="ReporteDiarioId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SobreDGI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SobreEmpresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SobreEmpresaProcesado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatosRecepcion" nillable="true" type="tns:DatosRecepcion" />
+  <xs:element name="ObtenerRecepcionPorEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param" nillable="true" type="tns:ParamObtenerRecepcionPorEstado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ParamObtenerRecepcionPorEstado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Condicion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecurityToken" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParamObtenerRecepcionPorEstado" nillable="true" type="tns:ParamObtenerRecepcionPorEstado" />
+  <xs:element name="ObtenerRecepcionPorEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerRecepcionPorEstadoResult" nillable="true" type="tns:ResultObtenerRecepcionPorEstado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ResultObtenerRecepcionPorEstado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="tns:ErrorNegocio" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RecepcionIDs" nillable="true" type="q1:ArrayOflong" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultObtenerRecepcionPorEstado" nillable="true" type="tns:ResultObtenerRecepcionPorEstado" />
+</xs:schema>

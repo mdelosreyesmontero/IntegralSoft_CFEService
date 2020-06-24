@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d9f34823-3ccf-4b9c-a623-cbac917a7615" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8070/ServiceFacade.svc?Wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceFacade3.wsdl" MetadataType="Wsdl" ID="efc30e5e-9281-424e-9e79-91f1b2634c25" SourceId="1" SourceUrl="http://atos2363.dompres.net:8070/ServiceFacade.svc?wsdl" />
+    <MetadataFile FileName="ServiceFacade2.xsd" MetadataType="Schema" ID="c766c953-746c-4f56-b9c3-37dc276cefa7" SourceId="1" SourceUrl="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceFacade.xsd" MetadataType="Schema" ID="cafa1316-219e-474b-9430-3c7d38caefdf" SourceId="1" SourceUrl="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceFacade31.wsdl" MetadataType="Wsdl" ID="6ac7c0b5-0d31-431a-856a-0da3335dbb28" SourceId="1" SourceUrl="http://atos2363.dompres.net:8070/ServiceFacade.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ServiceFacade21.xsd" MetadataType="Schema" ID="b40f0104-4749-4760-bf8e-9b52cfd76fc2" SourceId="1" SourceUrl="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceFacade32.wsdl" MetadataType="Wsdl" ID="695b8ab4-883d-4553-a80c-700f799d1081" SourceId="1" SourceUrl="http://localhost:8070/ServiceFacade.svc?Wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

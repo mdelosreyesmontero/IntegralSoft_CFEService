@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://IntegralSoft/IntegralCFEService/V001" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceFacade" targetNamespace="http://IntegralSoft/IntegralCFEService/V001" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://atos2363.dompres.net:8070/ServiceFacade.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://IntegralSoft/IntegralCFEService/V001/Imports">
+      <xsd:import schemaLocation="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd0" namespace="http://IntegralSoft/IntegralCFEService/V001" />
+      <xsd:import schemaLocation="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceFacade_EnviarCFE_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCFE" />
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_EnviarCFE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCFEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_ConsultarCFE_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCFE" />
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_ConsultarCFE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCFEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_ObtenerRecepcionPorEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerRecepcionPorEstado" />
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_ObtenerRecepcionPorEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerRecepcionPorEstadoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceFacade">
+    <wsdl:operation name="EnviarCFE">
+      <wsdl:input wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/EnviarCFE" message="tns:IServiceFacade_EnviarCFE_InputMessage" />
+      <wsdl:output wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/EnviarCFEResponse" message="tns:IServiceFacade_EnviarCFE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCFE">
+      <wsdl:input wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ConsultarCFE" message="tns:IServiceFacade_ConsultarCFE_InputMessage" />
+      <wsdl:output wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ConsultarCFEResponse" message="tns:IServiceFacade_ConsultarCFE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRecepcionPorEstado">
+      <wsdl:input wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ObtenerRecepcionPorEstado" message="tns:IServiceFacade_ObtenerRecepcionPorEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ObtenerRecepcionPorEstadoResponse" message="tns:IServiceFacade_ObtenerRecepcionPorEstado_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="ServiceFacade">
+    <wsdl:port name="BasicHttpBinding_IServiceFacade" binding="i0:BasicHttpBinding_IServiceFacade">
+      <soap:address location="http://atos2363.dompres.net:8070/ServiceFacade.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

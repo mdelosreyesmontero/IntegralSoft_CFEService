@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="eea48fb3-a5db-429f-b8b0-7ade28298dd9" activeEnvironment="Default" name="ServiceFacade" resourceRoot="" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="2a1ea4f7-8aea-4f26-bfed-d7551a356a79" wsaVersion="NONE" name="BasicHttpBinding_IServiceFacade" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IServiceFacade" soapVersion="1_1" anonymous="optional" definition="http://localhost:8070/ServiceFacade.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8070/ServiceFacade.svc?wsdl"><con:part><con:url>http://localhost:8070/ServiceFacade.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ServiceFacade" targetNamespace="http://IntegralSoft/IntegralCFEService/V001" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:i0="http://tempuri.org/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://IntegralSoft/IntegralCFEService/V001" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://atos2363.dompres.net:8070/ServiceFacade.svc?wsdl=wsdl0"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://IntegralSoft/IntegralCFEService/V001/Imports">
+      <xsd:import schemaLocation="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd0" namespace="http://IntegralSoft/IntegralCFEService/V001"/>
+      <xsd:import schemaLocation="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceFacade_EnviarCFE_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCFE"/>
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_EnviarCFE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCFEResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_ConsultarCFE_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCFE"/>
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_ConsultarCFE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCFEResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_ObtenerRecepcionPorEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerRecepcionPorEstado"/>
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_ObtenerRecepcionPorEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerRecepcionPorEstadoResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IServiceFacade">
+    <wsdl:operation name="EnviarCFE">
+      <wsdl:input wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/EnviarCFE" message="tns:IServiceFacade_EnviarCFE_InputMessage"/>
+      <wsdl:output wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/EnviarCFEResponse" message="tns:IServiceFacade_EnviarCFE_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCFE">
+      <wsdl:input wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ConsultarCFE" message="tns:IServiceFacade_ConsultarCFE_InputMessage"/>
+      <wsdl:output wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ConsultarCFEResponse" message="tns:IServiceFacade_ConsultarCFE_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRecepcionPorEstado">
+      <wsdl:input wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ObtenerRecepcionPorEstado" message="tns:IServiceFacade_ObtenerRecepcionPorEstado_InputMessage"/>
+      <wsdl:output wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ObtenerRecepcionPorEstadoResponse" message="tns:IServiceFacade_ObtenerRecepcionPorEstado_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="ServiceFacade">
+    <wsdl:port name="BasicHttpBinding_IServiceFacade" binding="i0:BasicHttpBinding_IServiceFacade">
+      <soap:address location="http://atos2363.dompres.net:8070/ServiceFacade.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://atos2363.dompres.net:8070/ServiceFacade.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:i0="http://IntegralSoft/IntegralCFEService/V001" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:import namespace="http://IntegralSoft/IntegralCFEService/V001" location="http://atos2363.dompres.net:8070/ServiceFacade.svc?wsdl"/>
+  <wsdl:types/>
+  <wsdl:binding name="BasicHttpBinding_IServiceFacade" type="i0:IServiceFacade">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="EnviarCFE">
+      <soap:operation soapAction="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/EnviarCFE" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCFE">
+      <soap:operation soapAction="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ConsultarCFE" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRecepcionPorEstado">
+      <soap:operation soapAction="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ObtenerRecepcionPorEstado" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://atos2363.dompres.net:8070/ServiceFacade.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ServiceFacade" targetNamespace="http://IntegralSoft/IntegralCFEService/V001" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:i0="http://tempuri.org/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://IntegralSoft/IntegralCFEService/V001" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://atos2363.dompres.net:8070/ServiceFacade.svc?wsdl=wsdl0"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://IntegralSoft/IntegralCFEService/V001/Imports">
+      <xsd:import schemaLocation="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd0" namespace="http://IntegralSoft/IntegralCFEService/V001"/>
+      <xsd:import schemaLocation="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceFacade_EnviarCFE_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCFE"/>
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_EnviarCFE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCFEResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_ConsultarCFE_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCFE"/>
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_ConsultarCFE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCFEResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_ObtenerRecepcionPorEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerRecepcionPorEstado"/>
+  </wsdl:message>
+  <wsdl:message name="IServiceFacade_ObtenerRecepcionPorEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerRecepcionPorEstadoResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IServiceFacade">
+    <wsdl:operation name="EnviarCFE">
+      <wsdl:input wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/EnviarCFE" message="tns:IServiceFacade_EnviarCFE_InputMessage"/>
+      <wsdl:output wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/EnviarCFEResponse" message="tns:IServiceFacade_EnviarCFE_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCFE">
+      <wsdl:input wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ConsultarCFE" message="tns:IServiceFacade_ConsultarCFE_InputMessage"/>
+      <wsdl:output wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ConsultarCFEResponse" message="tns:IServiceFacade_ConsultarCFE_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRecepcionPorEstado">
+      <wsdl:input wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ObtenerRecepcionPorEstado" message="tns:IServiceFacade_ObtenerRecepcionPorEstado_InputMessage"/>
+      <wsdl:output wsaw:Action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ObtenerRecepcionPorEstadoResponse" message="tns:IServiceFacade_ObtenerRecepcionPorEstado_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="ServiceFacade">
+    <wsdl:port name="BasicHttpBinding_IServiceFacade" binding="i0:BasicHttpBinding_IServiceFacade">
+      <soap:address location="http://atos2363.dompres.net:8070/ServiceFacade.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://IntegralSoft/IntegralCFEService/V001" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://IntegralSoft/IntegralCFEService/V001">
+  <xs:import schemaLocation="http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:element name="EnviarCFE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param" nillable="true" type="tns:ParamEnviarCFE"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ParamEnviarCFE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adenda" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="EmailPDFDestinatario" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SecurityToken" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SobreCFE" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParamEnviarCFE" nillable="true" type="tns:ParamEnviarCFE"/>
+  <xs:element name="EnviarCFEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EnviarCFEResult" nillable="true" type="tns:ResultEnviarCFE"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ResultEnviarCFE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="tns:ErrorNegocio"/>
+      <xs:element minOccurs="0" name="IdResultCFE" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultEnviarCFE" nillable="true" type="tns:ResultEnviarCFE"/>
+  <xs:complexType name="ErrorNegocio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:int"/>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorNegocio" nillable="true" type="tns:ErrorNegocio"/>
+  <xs:element name="ConsultarCFE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param" nillable="true" type="tns:ParamConsultarCFE"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ParamConsultarCFE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RecepcionId" type="xs:long"/>
+      <xs:element minOccurs="0" name="SecurityToken" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParamConsultarCFE" nillable="true" type="tns:ParamConsultarCFE"/>
+  <xs:element name="ConsultarCFEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConsultarCFEResult" nillable="true" type="tns:ResultConsultarCFE"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ResultConsultarCFE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatosRecepcion" nillable="true" type="tns:DatosRecepcion"/>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="tns:ErrorNegocio"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultConsultarCFE" nillable="true" type="tns:ResultConsultarCFE"/>
+  <xs:complexType name="DatosRecepcion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Archivo" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CAE" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="CaeId" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="CodigoSeguridad" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="EmailPdfDest" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="EnRegimen" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Fact" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="FeMovimientoId" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="FechaGeneracion" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Impreso" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NroComprobante" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="Procesado" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Publicado" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PublicadoWeb" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RE02" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecepcionId" type="xs:long"/>
+      <xs:element minOccurs="0" name="ReporteDiarioId" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SobreDGI" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SobreEmpresa" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SobreEmpresaProcesado" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatosRecepcion" nillable="true" type="tns:DatosRecepcion"/>
+  <xs:element name="ObtenerRecepcionPorEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="param" nillable="true" type="tns:ParamObtenerRecepcionPorEstado"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ParamObtenerRecepcionPorEstado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Condicion" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SecurityToken" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParamObtenerRecepcionPorEstado" nillable="true" type="tns:ParamObtenerRecepcionPorEstado"/>
+  <xs:element name="ObtenerRecepcionPorEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerRecepcionPorEstadoResult" nillable="true" type="tns:ResultObtenerRecepcionPorEstado"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ResultObtenerRecepcionPorEstado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="tns:ErrorNegocio"/>
+      <xs:element minOccurs="0" name="RecepcionIDs" nillable="true" type="q1:ArrayOflong" xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultObtenerRecepcionPorEstado" nillable="true" type="tns:ResultObtenerRecepcionPorEstado"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:complexType name="ArrayOflong">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="long" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflong" nillable="true" type="tns:ArrayOflong"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://atos2363.dompres.net:8070/ServiceFacade.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://atos2363.dompres.net:8070/ServiceFacade.svc</con:endpoint></con:endpoints><con:operation id="d6546b88-caf2-4554-917c-e829b1cd4e4b" isOneWay="false" action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ConsultarCFE" name="ConsultarCFE" bindingOperationName="ConsultarCFE" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3fb7942e-9886-40b8-a9eb-73c070542ea8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://atos2363.dompres.net:8070/ServiceFacade.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v001="http://IntegralSoft/IntegralCFEService/V001">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v001:ConsultarCFE>\r
+         <!--Optional:-->\r
+         <v001:param>\r
+            <!--Optional:-->\r
+            <v001:RecepcionId>3</v001:RecepcionId>\r
+            <!--Optional:-->\r
+            <v001:SecurityToken>CFE_USR-4543411265897360-061711-972067297a70a8294ff21672fe8b00d6-211542200013</v001:SecurityToken>\r
+         </v001:param>\r
+      </v001:ConsultarCFE>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ConsultarCFE"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="bf659b29-f179-4695-97f4-3b0f8b0ef899" isOneWay="false" action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/EnviarCFE" name="EnviarCFE" bindingOperationName="EnviarCFE" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f0fa736e-1764-485d-b82a-5a46679a962f" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://atos2363.dompres.net:8070/ServiceFacade.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v001="http://IntegralSoft/IntegralCFEService/V001">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v001:EnviarCFE>\r
+         <!--Optional:-->\r
+         <v001:param>\r
+            <!--Optional:-->\r
+            <v001:Adenda></v001:Adenda>\r
+            <!--Optional:-->\r
+            <v001:EmailPDFDestinatario>mail@mail.com</v001:EmailPDFDestinatario>\r
+            <!--Optional:-->\r
+            <v001:SecurityToken>CFE_USR-4543411265897360-061711-972067297a70a8294ff21672fe8b00d6-211542200013</v001:SecurityToken>\r
+            <!--Optional:-->\r
+            <v001:SobreCFE><![CDATA[<CFE version="1.0" xmlns="http://cfe.dgi.gub.uy"><eTck><Encabezado><IdDoc><TipoCFE>101</TipoCFE><FchEmis>2020-06-08</FchEmis><FmaPago>1</FmaPago></IdDoc><Emisor><RUCEmisor>216402280015</RUCEmisor><RznSoc>Lexington Logistics LLC - Suc. Uruguay</RznSoc><CdgDGISucur>1</CdgDGISucur><DomFiscal>Guatemala S/N - Recinto Portuario</DomFiscal><Ciudad>Montevideo</Ciudad><Departamento>MTVD</Departamento></Emisor><Receptor><TipoDocRecep>4</TipoDocRecep><CodPaisRecep>AR</CodPaisRecep><DocRecepExt>30712479465</DocRecepExt><RznSocRecep>C &amp; C GROUP S.A</RznSocRecep><DirRecep>OLGA COSSETTINI - BUENOS AIRES - ARGENTINA</DirRecep><CiudadRecep></CiudadRecep></Receptor><Totales><TpoMoneda>USD</TpoMoneda><TpoCambio>42.713</TpoCambio><MntNoGrv>5416.80</MntNoGrv><MntNetoIvaTasaMin>0.000</MntNetoIvaTasaMin><MntNetoIVATasaBasica>0.000</MntNetoIVATasaBasica><IVATasaMin>10.000</IVATasaMin><IVATasaBasica>22.000</IVATasaBasica><MntIVATasaMin>0.00</MntIVATasaMin><MntIVATasaBasica>0.00</MntIVATasaBasica><MntTotal>5416.80</MntTotal><CantLinDet>1</CantLinDet><MntPagar>5416.80</MntPagar></Totales></Encabezado><Detalle><Item><NroLinDet>1</NroLinDet><IndFact>1</IndFact><NomItem>057380    JW XR 21YRS-WHISKY-750ML-40%-REF-IBC-TR                 741730        </NomItem><DscItem>ESCOCIA</DscItem><Cantidad>60.000</Cantidad><UniMed>U</UniMed><PrecioUnitario>90.28</PrecioUnitario><MontoItem>5416.80</MontoItem></Item></Detalle></eTck></CFE>]]]]>><![CDATA[</v001:SobreCFE>\r
+         </v001:param>\r
+      </v001:EnviarCFE>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/EnviarCFE"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="ee322218-1df0-48f8-97ec-5e37865ec034" isOneWay="false" action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ObtenerRecepcionPorEstado" name="ObtenerRecepcionPorEstado" bindingOperationName="ObtenerRecepcionPorEstado" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f14ba31e-d58b-48d6-a340-7528fd7354b6" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://atos2363.dompres.net:8070/ServiceFacade.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v001="http://IntegralSoft/IntegralCFEService/V001">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v001:ObtenerRecepcionPorEstado>\r
+         <!--Optional:-->\r
+         <v001:param>\r
+            <!--Optional:-->\r
+            <v001:Condicion>N</v001:Condicion>\r
+            <!--Optional:-->\r
+            <v001:SecurityToken>CFE_USR-4543411265897360-061711-972067297a70a8294ff21672fe8b00d6-211542200013</v001:SecurityToken>\r
+         </v001:param>\r
+      </v001:ObtenerRecepcionPorEstado>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://IntegralSoft/IntegralCFEService/V001/IServiceFacade/ObtenerRecepcionPorEstado"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

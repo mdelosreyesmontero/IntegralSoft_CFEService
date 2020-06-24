@@ -1,0 +1,6 @@
+C:\IntegralSoft\IntegralSoft.IntegralCFE.DataAccess\bin\Debug\IntegralSoft.IntegralCFE.DataAccess.dll
+C:\IntegralSoft\IntegralSoft.IntegralCFE.DataAccess\bin\Debug\IntegralSoft.IntegralCFE.DataAccess.pdb
+C:\IntegralSoft\IntegralSoft.IntegralCFE.DataAccess\obj\Debug\IntegralSoft.IntegralCFE.DataAccess.dll
+C:\IntegralSoft\IntegralSoft.IntegralCFE.DataAccess\obj\Debug\IntegralSoft.IntegralCFE.DataAccess.pdb
+C:\IntegralSoft\IntegralSoft.IntegralCFE.DataAccess\obj\Debug\IntegralSoft.IntegralCFE.DataAccess.csprojAssemblyReference.cache
+C:\IntegralSoft\IntegralSoft.IntegralCFE.DataAccess\obj\Debug\IntegralSoft.IntegralCFE.DataAccess.csproj.CoreCompileInputs.cache
