@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="IntegralSoft.IntegralCFE.Service.ServiceFacade" CodeBehind="ServiceFacade.svc.cs" %>
